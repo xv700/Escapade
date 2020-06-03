@@ -36,7 +36,18 @@ document.getElementById('file').addEventListener('change', (e) => {
   });
 });
 ```
-# php修行之路
+
+**Examples**:
+
+| Quality | Input size | Output size | Compression ratio | Description |
+| --- | --- | --- | --- | --- |
+| 0 | 2.12 MB | 114.61 KB | 94.72% | - |
+| 0.2 | 2.12 MB | 349.57 KB | 83.90% | - |
+| 0.4 | 2.12 MB | 517.10 KB | 76.18% | - |
+| 0.6 | 2.12 MB | 694.99 KB | 67.99% | Recommend |
+| 0.8 | 2.12 MB | 1.14 MB | 46.41% | Recommend |
+| 1 | 2.12 MB | 2.12 MB | 0% | Not recommend |
+| NaN | 2.12 MB | 2.01 MB | 5.02% | - |
 
 ## 目录
 
