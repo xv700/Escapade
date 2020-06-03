@@ -1,5 +1,5 @@
 # 基于Php的Restful
-只是自己写着玩，做一个最简单的输出只有json格式的restfu
+只是自己写着玩，做一个最简单的输出只有json格式的restful
 # php修行之路
 
 ## 目录
