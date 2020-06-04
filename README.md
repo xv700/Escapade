@@ -7,7 +7,7 @@
 ```json
 {
 Action:"Select",                 
-From:"table",                     "//读操作哪个表"
+From:"table",                     
 fields:["id","make","model"],     "//显示那些字段，匹配所有字段怎么办"
 limit:"5,10",
 filter:{
@@ -20,9 +20,11 @@ filter:{
    },
 }
 ```
+
 ```text
 Action：执行动作，查询（Select），更新（Update），Delete（删除）,
 From：要操作的表,
+fields:显示那些字段 (匹配所有字段怎么办)
 ```
 DEMO：
 ```html
