@@ -5,12 +5,12 @@
 假设我要操作数据库某个表，向后端发送
 ```json
 {
-action:"select","执行动作，查询（Select），更新（Update），Delete（删除）"
-from:"table","//读操作哪个表"
-fields:["id","make","model"],"//显示那些字段，匹配所有字段怎么办"
+action:"select",                  "//执行动作，查询（Select），更新（Update），Delete（删除）"
+from:"table",                     "//读操作哪个表"
+fields:["id","make","model"],     "//显示那些字段，匹配所有字段怎么办"
 limit:"5,10",
 filter:{
-   where:{"id":1234},"//条件"
+   where:{"id":1234},             "//条件"
    },
 }
 ```
