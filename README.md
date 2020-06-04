@@ -28,6 +28,11 @@ action：执行动作，查询（Select），更新（Update），Delete（删�
 | or | 逻辑或 |
 | gt,gte | 大于(>),大于或等于(> =)。只有效数值和日期值 |
 | lt,lte | 小于(<),小于或等于(< =)。只有效数值和日期值 |
+| between | 在…之间 |
+| inq,nin | 在/不在一个数组之内 |
+| ne | 不等于(!=) |
+| like,nlike | like/not like 操作符返回符合正则表达式的数据 |
+
 ```js
 import axios from 'axios';
 import Compressor from 'compressorjs';
