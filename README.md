@@ -22,8 +22,20 @@ filter:{
 ```
 action：执行动作，查询（Select），更新（Update），Delete（删除）"
 
-DEMO：<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+DEMO：
 ```html
+<!DOCTYPE html> 
+<html > 
+  <head> 
+    <meta charset="UTF-8"> 
+    <title>anchor</title> 
+
+  </head> 
+  <body > 
+
+  </body> 
+</html> 
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 var data = {
 Action:"Select",                 
