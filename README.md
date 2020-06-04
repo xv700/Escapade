@@ -14,7 +14,7 @@ filter:{
    where:{"id":1234},             "//条件"
    fields:["id","make","model"],  "//显示那些字段"
    limit:"5,10",                  "//从第几条显示到第几条"
-   order:"id",                    "//按照哪个字段排序（默认倒序）"
+   order:"id,ASC",                    "//按照哪个字段排序Asc为正序，Desc为倒序"
    },
 }
 ```
