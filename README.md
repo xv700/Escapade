@@ -21,6 +21,7 @@ filter:{
 action：执行动作，查询（Select），更新（Update），Delete（删除）"
 
 | 操作符 | 说明 |
+| --- | --- |
 | and | 逻辑与 |
 
 ```js
