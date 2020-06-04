@@ -32,7 +32,7 @@ DEMO：
 
   </head> 
   <body > 
-
+获取表名字为TableE666的，所有字段的数据
   </body> 
 </html> 
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -40,16 +40,7 @@ DEMO：
 var data = {
 Action:"Select",                 
 From:"table",                     
-fields:["id","make","model"],     
-limit:"5,10",
-filter:{
-   
-   fields:["id","make","model"],  
-   limit:"5,10",                  
-   sort:"[{by:'id',order:'ASC'},{by:'name',order:'desc'}]",                    
-   where:{"id":1234},             
-   include:{"posts":"authorPointer"}, 
-   },
+fields:["*"],     
 }
 
 $.ajax({  
@@ -71,6 +62,21 @@ console.log(ret)
 })   
 
 </script>
+```
+后端返回:
+```JSON
+{
+   datalist:[
+      {
+      id:1,
+      name:"asd2322"
+      },
+      {
+      id:2,
+      name:"asd2322"
+      }
+   ], 
+}
 ```
 
 
