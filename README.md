@@ -20,12 +20,15 @@ filter:{
    },
 }
 ```
+| 字段名 | 举例 | 说明 |
+| --- | --- | --- |
+| Action | "Select" | 执行动作，查询（Select），更新（Update），Delete（删除） | 
+| From | "table" | 要操作的表名 | 
 
-```text
-Action：执行动作，查询（Select），更新（Update），Delete（删除）,
-From：要操作的表,
-fields:显示那些字段 (匹配所有字段怎么办)
-```
+
+Fields:["id","make","model"],────显示那些字段 (匹配所有字段怎么办)
+Limit:"5,10",   
+
 DEMO：
 ```html
 <!DOCTYPE html> 
@@ -82,7 +85,6 @@ console.log(ret)
    ], 
 }
 ```
-
 
 | 操作符 | 说明 |
 | --- | --- |
