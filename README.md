@@ -1,10 +1,11 @@
 # 基于Php的Restful
-只是自己写着玩，做一个最简单的输出只有json格式的restful
+只是自己写着玩，做一个最简单的输出只有json格式的Restful
 
-**Examples**:
+**产品设计**:
+假设我要操作数据库某个表
 ```js
 {
-action:"select",
+action:"select",//执行动作，查询（Select），更新（Update），Delete（删除）
 from:"table",
 limit:"5,10",
 }
