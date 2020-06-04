@@ -20,8 +20,10 @@ filter:{
    },
 }
 ```
-action：执行动作，查询（Select），更新（Update），Delete（删除）"
-
+```text
+Action：执行动作，查询（Select），更新（Update），Delete（删除）,
+From：要操作的表,
+```
 DEMO：
 ```html
 <!DOCTYPE html> 
