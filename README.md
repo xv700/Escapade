@@ -26,6 +26,8 @@ action：执行动作，查询（Select），更新（Update），Delete（删�
 | --- | --- |
 | and | 逻辑与 |
 | or | 逻辑或 |
+| gt,gte | 大于(>),大于或等于(> =)。只有效数值和日期值 |
+| lt,lte | 小于(<),小于或等于(< =)。只有效数值和日期值 |
 ```js
 import axios from 'axios';
 import Compressor from 'compressorjs';
