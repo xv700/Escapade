@@ -23,7 +23,7 @@ action：执行动作，查询（Select），更新（Update），Delete（删�
 | 操作符 | 说明 |
 | --- | --- |
 | and | 逻辑与 |
-
+| or | 逻辑或 |
 ```js
 import axios from 'axios';
 import Compressor from 'compressorjs';
