@@ -22,8 +22,9 @@ filter:{
 ```
 action：执行动作，查询（Select），更新（Update），Delete（删除）"
 
-DEMO：
-```js
+DEMO：<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+```html
+
 var data = {
 Action:"Select",                 
 From:"table",                     
@@ -58,6 +59,7 @@ console.log(ret)
 
 })    
 ```
+
 
 | 操作符 | 说明 |
 | --- | --- |
