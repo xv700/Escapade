@@ -24,7 +24,7 @@ action：执行动作，查询（Select），更新（Update），Delete（删�
 
 DEMO：<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 ```html
-
+<script>
 var data = {
 Action:"Select",                 
 From:"table",                     
@@ -56,8 +56,9 @@ success: function (ret) {
 console.log(ret)
 
 }
+})   
 
-})    
+</script>
 ```
 
 
