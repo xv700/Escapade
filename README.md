@@ -1,9 +1,13 @@
 # 基于Php的Restful
 只是自己写着玩，做一个最简单的输出只有json格式的restful
 
-
-```html
-<input type="file" id="file" accept="image/*">
+**Examples**:
+```js
+{
+action:"select",
+from:"table",
+limit:"5,10",
+}
 ```
 
 ```js
