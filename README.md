@@ -20,6 +20,16 @@ filter:{
 ```
 action：执行动作，查询（Select），更新（Update），Delete（删除）"
 
+| 操作符 | 说明
+| --- | --- | --- | --- | --- |
+| and | 逻辑与
+| 0.2 | 2.12 MB | 349.57 KB | 83.90% | - |
+| 0.4 | 2.12 MB | 517.10 KB | 76.18% | - |
+| 0.6 | 2.12 MB | 694.99 KB | 67.99% | Recommend |
+| 0.8 | 2.12 MB | 1.14 MB | 46.41% | Recommend |
+| 1 | 2.12 MB | 2.12 MB | 0% | Not recommend |
+| NaN | 2.12 MB | 2.01 MB | 5.02% | - |
+
 ```js
 import axios from 'axios';
 import Compressor from 'compressorjs';
