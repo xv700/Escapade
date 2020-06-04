@@ -8,6 +8,7 @@
 action:"select",//执行动作，查询（Select），更新（Update），Delete（删除）
 from:"table",
 limit:"5,10",
+where:"",//条件
 }
 ```
 
