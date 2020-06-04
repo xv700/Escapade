@@ -14,7 +14,7 @@ filter:{
    
    fields:["id","make","model"],  "//显示那些字段"
    limit:"5,10",                  "//从第几条显示到第几条"
-   sort:"[{by:"id","order":ASC},{by:"name","order":desc}]",        "//按照哪个字段排序Asc为正序，Desc为倒序"
+   sort:"[{by:"id",order:"ASC"},{by:"name","order":desc}]",        "//按照哪个字段排序Asc为正序，Desc为倒序"
    where:{"id":1234},             "//条件"
    include:{"posts":"authorPointer"}, "//关系数据"
    },
