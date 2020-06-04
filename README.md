@@ -22,6 +22,43 @@ filter:{
 ```
 action：执行动作，查询（Select），更新（Update），Delete（删除）"
 
+DEMO：
+```js
+var data = {
+Action:"Select",                 
+From:"table",                     
+fields:["id","make","model"],     
+limit:"5,10",
+filter:{
+   
+   fields:["id","make","model"],  
+   limit:"5,10",                  
+   sort:"[{by:'id',order:'ASC'},{by:'name',order:'desc'}]",                    
+   where:{"id":1234},             
+   include:{"posts":"authorPointer"}, 
+   },
+}
+
+$.ajax({  
+
+url:"/restful/test.php",
+
+type:"post",  
+
+dataType:"json",  
+
+data:JSON.stringify(data),  
+
+headers: {'Content-Type': 'application/json'},  
+
+success: function (ret) {    
+console.log(ret)
+
+}
+
+})    
+```
+
 | 操作符 | 说明 |
 | --- | --- |
 | and | 逻辑与 |
