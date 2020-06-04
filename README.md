@@ -6,7 +6,8 @@
 ```js
 {
 action:"select",//执行动作，查询（Select），更新（Update），Delete（删除）
-from:"table",
+from:"table",//读操作哪个表
+fields:["id","make","model"],//显示那些字段，匹配所有字段怎么办
 limit:"5,10",
 where:"",//条件
 }
