@@ -1,4 +1,4 @@
-# 基于Restful的查询数据库
+# 基于Restful的查询Mysql数据库
 只是自己写着玩，做一个最简单的输出只有json格式的Restful
 
 **产品设计**:
