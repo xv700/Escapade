@@ -25,13 +25,44 @@ Filter:{
    },
 }
 ```
+
 | 字段名 | 举例 | 说明 |
 | --- | --- | --- |
 | Action | "Select" | 执行动作，查询（Select），更新（Update），Delete（删除） | 
 | Fields | ["id","make","model"] | 显示那些字段 (没想好：匹配所有字段怎么办 ,例如：[" * "]  | 
 | Limit | "5,10" | 读取条数，从哪个开始到哪里结束 | 
-| Filter | "5,10" | 过滤条件 | 
-|  | fields | 过滤条件 | 
+| Filter | fields  | 过滤条件 | 
+| fields | fields | fields | 过滤条件 | 
+
+<col width=69 span=3 style='width:52pt'>
+ <tr height=19 style='height:14.0pt'>
+  <td colspan=2 height=19 class=xl636101 width=138 style='height:14.0pt;
+  width:104pt'>合并行</td>
+  <td class=xl156101 width=69 style='width:52pt'>c1</td>
+ </tr>
+ <tr height=19 style='height:14.0pt'>
+  <td height=19 class=xl156101 style='height:14.0pt'>a2</td>
+  <td rowspan=2 class=xl636101>合并列</td>
+  <td class=xl156101>c2</td>
+ </tr>
+ <tr height=19 style='height:14.0pt'>
+  <td height=19 class=xl156101 style='height:14.0pt'>a3</td>
+  <td class=xl156101>c3</td>
+ </tr>
+ <tr height=19 style='height:14.0pt'>
+  <td height=19 class=xl156101 style='height:14.0pt'>a4</td>
+  <td colspan=2 rowspan=2 class=xl636101>大合并</td>
+ </tr>
+ <tr height=19 style='height:14.0pt'>
+  <td height=19 class=xl156101 style='height:14.0pt'>a5</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=69 style='width:52pt'></td>
+  <td width=69 style='width:52pt'></td>
+  <td width=69 style='width:52pt'></td>
+ </tr>
+ <![endif]>
 
 
 DEMO：
