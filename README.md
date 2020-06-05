@@ -1,6 +1,29 @@
 # 基于Restful的查询Mysql数据库
-只是自己写着玩，做一个最简单的输出只有json格式的Restful，并不限定后端语言，这里只是给出协议规定。
+并不限定后端语言，这里只是给出协议规定。
+##暂定：
+1.X端向服务端发送http协议 json格式，发送body（dataType:"json"）
+demo:
+```js
+$.ajax({  
 
+url:"/restful/test.php",
+
+type:"post",  
+
+dataType:"json",  
+
+data:JSON.stringify(data),  
+
+headers: {'Content-Type': 'application/json'},  
+
+success: function (ret) {    
+console.log(ret)
+
+}
+
+})   
+```
+只是自己写着玩，做一个最简单的输出只有json格式的Restful，
 **产品设计**:
 假设我要操作数据库某个表，向后端发送，
 
