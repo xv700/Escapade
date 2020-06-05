@@ -32,7 +32,7 @@ Filter:{
 | Fields | ["id","make","model"] | 显示那些字段 (没想好：匹配所有字段怎么办 ,例如：[" * "]  | 
 | Limit | "5,10" | 读取条数，从哪个开始到哪里结束 | 
 | Filter | | 过滤条件 | 
-| fields | ["id","make","model"]| fields | 显示那些字段 | 
+| Filter.fields | ["id","make","model"]| 显示那些字段 | 
 
 
 
