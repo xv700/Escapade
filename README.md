@@ -114,7 +114,6 @@ console.log(ret)
 ```
 ## 代码实现（后端PHP，数据库Mysql）
 
-- [Bootstrap用户手册：设计响应式网站](http://pan.baidu.com/s/1i5si3xN)
 - [PHP代码](/PHP)
 
 ## 目录
