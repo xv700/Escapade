@@ -34,12 +34,13 @@ Filter:{
 | Filter.fields | ["id","make","model"]| 显示那些字段 | 
 | Filter.limit | "5,10"| 从第几条显示到第几条 | 
 | Filter.sort| [{by:"id",order:"ASC"},{by:"name","order":desc}] | 按照哪个字段排序Asc为正序，Desc为倒序 | 
-| Filter.where| {"id":1234} | 字段条件 | 
+| Filter.where| {"id":1234,perator:"eq" } | 字段条件(看下面的操作符) | 
 | Filter.include| {"posts":"authorPointer"} | 关系数据（没想好怎么关联） | 
 
-暂定：
+字段条件操作符,暂定：
 | 操作符 | 说明 |
 | --- | --- |
+| eq | 等于 |
 | and | 逻辑与 |
 | or | 逻辑或 |
 | gt,gte | 大于(>),大于或等于(> =)。只有效数值和日期值 |
@@ -106,18 +107,6 @@ console.log(ret)
 }
 ```
 
-
-**Examples**:
-
-| Quality | Input size | Output size | Compression ratio | Description |
-| --- | --- | --- | --- | --- |
-| 0 | 2.12 MB | 114.61 KB | 94.72% | - |
-| 0.2 | 2.12 MB | 349.57 KB | 83.90% | - |
-| 0.4 | 2.12 MB | 517.10 KB | 76.18% | - |
-| 0.6 | 2.12 MB | 694.99 KB | 67.99% | Recommend |
-| 0.8 | 2.12 MB | 1.14 MB | 46.41% | Recommend |
-| 1 | 2.12 MB | 2.12 MB | 0% | Not recommend |
-| NaN | 2.12 MB | 2.01 MB | 5.02% | - |
 
 ## 目录
 
