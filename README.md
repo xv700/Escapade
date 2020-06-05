@@ -1,7 +1,7 @@
 # 基于Restful的查询Mysql数据库
 并不限定后端语言，这里只是给出协议规定。  
 
-##暂定：  
+## 暂定：  
 1.X端向服务端发送http协议 json格式，发送body（dataType:"json"）  
 2.服务端只输出json格式。  
 
