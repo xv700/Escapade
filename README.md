@@ -16,8 +16,8 @@ From:"table",
 Fields:["id","make","model"],   
 Filter:{
    
-   fields:["id","make","model"],  "//显示那些字段"
-   limit:"5,10",                  "//从第几条显示到第几条"
+   fields:["id","make","model"],  
+   limit:"5,10",                  
    sort:"[{by:"id",order:"ASC"},{by:"name","order":desc}]",        "//按照哪个字段排序Asc为正序，Desc为倒序"
    where:{"id":1234},             "//条件"
    include:{"posts":"authorPointer"}, "//关系数据"
@@ -32,8 +32,10 @@ Filter:{
 | Limit | "5,10" | 读取条数，从哪个开始到哪里结束 | 
 | Filter | fields,limit,sort,where,include | 过滤条件 | 
 | Filter.fields | ["id","make","model"]| 显示那些字段 | 
-| Filter.limit | "5,10"| 显示那些字段 | 
-
+| Filter.limit | "5,10"| 从第几条显示到第几条 | 
+| Filter.sort| [{by:"id",order:"ASC"},{by:"name","order":desc}] | 按照哪个字段排序Asc为正序，Desc为倒序 | 
+| Filter.where| {"id":1234} | 字段条件 | 
+| Filter.include| {"posts":"authorPointer"} | 关系数据（没想好怎么关联） | 
 
 
 DEMO：
