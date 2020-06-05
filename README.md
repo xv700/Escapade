@@ -34,41 +34,6 @@ Filter:{
 | Filter | fields  | 过滤条件 | 
 | fields | fields | fields | 过滤条件 | 
 
-<table border=0 cellpadding=0 cellspacing=0 width=207 style='border-collapse:
- collapse;table-layout:fixed;width:156pt'>
- <col width=69 span=3 style='width:52pt'>
- <tr height=19 style='height:14.0pt'>
-  <td colspan=2 height=19 class=xl636101 width=138 style='height:14.0pt;
-  width:104pt'>合并行</td>
-  <td class=xl156101 width=69 style='width:52pt'>c1</td>
- </tr>
- <tr height=19 style='height:14.0pt'>
-  <td height=19 class=xl156101 style='height:14.0pt'>a2</td>
-  <td rowspan=2 class=xl636101>合并列</td>
-  <td class=xl156101>c2</td>
- </tr>
- <tr height=19 style='height:14.0pt'>
-  <td height=19 class=xl156101 style='height:14.0pt'>a3</td>
-  <td class=xl156101>c3</td>
- </tr>
- <tr height=19 style='height:14.0pt'>
-  <td height=19 class=xl156101 style='height:14.0pt'>a4</td>
-  <td colspan=2 rowspan=2 class=xl636101>大合并</td>
- </tr>
- <tr height=19 style='height:14.0pt'>
-  <td height=19 class=xl156101 style='height:14.0pt'>a5</td>
- </tr>
- <![if supportMisalignedColumns]>
- <tr height=0 style='display:none'>
-  <td width=69 style='width:52pt'></td>
-  <td width=69 style='width:52pt'></td>
-  <td width=69 style='width:52pt'></td>
- </tr>
- <![endif]>
-</table>
-————————————————
-版权声明：本文为CSDN博主「aladdin_sun」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/sunbocong/java/article/details/81033915
 
 
 DEMO：
