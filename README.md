@@ -33,14 +33,21 @@ Filter:{
 | Filter | fields,limit,sort,where,include | 过滤条件 | 
 | Filter.fields | ["id","make","model"]| 显示那些字段 | 
 | Filter.limit | "5,10"| 从第几条显示到第几条 | 
-| Filter.sort| [
-{by:"id",order:"ASC"},
-{by:"name","order":desc
-}]
- | 按照哪个字段排序Asc为正序，Desc为倒序 | 
+| Filter.sort| [{by:"id",order:"ASC"},{by:"name","order":desc}] | 按照哪个字段排序Asc为正序，Desc为倒序 | 
 | Filter.where| {"id":1234} | 字段条件 | 
 | Filter.include| {"posts":"authorPointer"} | 关系数据（没想好怎么关联） | 
 
+暂定：
+| 操作符 | 说明 |
+| --- | --- |
+| and | 逻辑与 |
+| or | 逻辑或 |
+| gt,gte | 大于(>),大于或等于(> =)。只有效数值和日期值 |
+| lt,lte | 小于(<),小于或等于(< =)。只有效数值和日期值 |
+| between | 在…之间 |
+| inq,nin | 在/不在一个数组之内 |
+| ne | 不等于(!=) |
+| like,nlike | like/not like 操作符返回符合正则表达式的数据 |
 
 DEMO：
 ```html
@@ -99,47 +106,6 @@ console.log(ret)
 }
 ```
 
-| 操作符 | 说明 |
-| --- | --- |
-| and | 逻辑与 |
-| or | 逻辑或 |
-| gt,gte | 大于(>),大于或等于(> =)。只有效数值和日期值 |
-| lt,lte | 小于(<),小于或等于(< =)。只有效数值和日期值 |
-| between | 在…之间 |
-| inq,nin | 在/不在一个数组之内 |
-| ne | 不等于(!=) |
-| like,nlike | like/not like 操作符返回符合正则表达式的数据 |
-
-```js
-import axios from 'axios';
-import Compressor from 'compressorjs';
-
-document.getElementById('file').addEventListener('change', (e) => {
-  const file = e.target.files[0];
-
-  if (!file) {
-    return;
-  }
-
-  new Compressor(file, {
-    quality: 0.6,
-    success(result) {
-      const formData = new FormData();
-
-      // The third parameter is required for server
-      formData.append('file', result, result.name);
-
-      // Send the compressed image file to server with XMLHttpRequest.
-      axios.post('/path/to/upload', formData).then(() => {
-        console.log('Upload success');
-      });
-    },
-    error(err) {
-      console.log(err.message);
-    },
-  });
-});
-```
 
 **Examples**:
 
