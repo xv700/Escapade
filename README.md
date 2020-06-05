@@ -33,7 +33,11 @@ Filter:{
 | Filter | fields,limit,sort,where,include | 过滤条件 | 
 | Filter.fields | ["id","make","model"]| 显示那些字段 | 
 | Filter.limit | "5,10"| 从第几条显示到第几条 | 
-| Filter.sort| [{by:"id",order:"ASC"},{by:"name","order":desc}] | 按照哪个字段排序Asc为正序，Desc为倒序 | 
+| Filter.sort| [
+{by:"id",order:"ASC"},
+{by:"name","order":desc
+}]
+ | 按照哪个字段排序Asc为正序，Desc为倒序 | 
 | Filter.where| {"id":1234} | 字段条件 | 
 | Filter.include| {"posts":"authorPointer"} | 关系数据（没想好怎么关联） | 
 
