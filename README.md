@@ -13,9 +13,9 @@
 {
 Action:"Select",                 
 From:"table",                     
-fields:["id","make","model"],     "//显示那些字段，匹配所有字段怎么办"
-limit:"5,10",
-filter:{
+Fields:["id","make","model"],   
+Limit:"5,10",
+Filter:{
    
    fields:["id","make","model"],  "//显示那些字段"
    limit:"5,10",                  "//从第几条显示到第几条"
@@ -30,6 +30,8 @@ filter:{
 | Action | "Select" | 执行动作，查询（Select），更新（Update），Delete（删除） | 
 | Fields | ["id","make","model"] | 显示那些字段 (没想好：匹配所有字段怎么办 ,例如：[" * "]  | 
 | Limit | "5,10" | 读取条数，从哪个开始到哪里结束 | 
+| Filter | "5,10" | 过滤条件 | 
+|  | fields | 过滤条件 | 
 
 
 DEMO：
