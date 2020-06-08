@@ -13,11 +13,10 @@
 {
 Action:"Select",                 
 From:"table",                     
-Fields:["id","make","model"],   
+Fields:["id","make","model"],
+limit:"5,10",
 Filter:{
-   
-
-   limit:"5,10",                  
+             
    sort:"[{by:"id",order:"ASC"},{by:"name","order":desc}]",        "//按照哪个字段排序Asc为正序，Desc为倒序"
    where:{"id":1234},             "//条件"
    include:{"posts":"authorPointer"}, "//关系数据"
