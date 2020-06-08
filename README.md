@@ -17,7 +17,7 @@ Fields:["id","make","model"],
 limit:"5,10",
 Sort:"[{by:"id",order:"ASC"},{by:"make","order":desc}]",  
 Filter:{
-   where:{"id":1234},             
+   where:{"logic":"and","id":1234,"perator":"eq"},             
    include:{"posts":"authorPointer"}, 
    },
 }
