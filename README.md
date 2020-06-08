@@ -15,9 +15,10 @@ Action:"Select",
 From:"table",                     
 Fields:["id","make","model"],
 limit:"5,10",
+Sort:"[{by:"id",order:"ASC"},{by:"make","order":desc}]",        "//按照哪个字段排序Asc为正序，Desc为倒序"
 Filter:{
              
-   sort:"[{by:"id",order:"ASC"},{by:"name","order":desc}]",        "//按照哪个字段排序Asc为正序，Desc为倒序"
+
    where:{"id":1234},             "//条件"
    include:{"posts":"authorPointer"}, "//关系数据"
    },
@@ -29,9 +30,9 @@ Filter:{
 | Action | "Select" | 执行动作，查询（Select），更新（Update），Delete（删除） | 
 | Fields | ["id","make","model"] | 显示那些字段 (没想好：匹配所有字段怎么办 ,例如：[" * "]  | 
 | Limit | "5,10" | 读取条数，从哪个开始到哪里结束 | 
+| Sort| [{by:"id",order:"ASC"},{by:"name","order":desc}] | 按照哪个字段排序Asc为正序，Desc为倒序 | 
 | Filter | fields,limit,sort,where,include | 过滤条件 |  
 | Filter.limit | "5,10"| 从第几条显示到第几条 | 
-| Filter.sort| [{by:"id",order:"ASC"},{by:"name","order":desc}] | 按照哪个字段排序Asc为正序，Desc为倒序 | 
 | Filter.where| {"id":1234,perator:"eq" } | 字段条件(看下面的操作符) | 
 | Filter.include| {"posts":"authorPointer"} | 关系数据（没想好怎么关联） | 
 
