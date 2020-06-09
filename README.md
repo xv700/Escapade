@@ -14,7 +14,7 @@
 Action:"Select",                 
 From:"table",                     
 Fields:["id","make","model"],
-limit:"5,10",
+Limit:"5,10",
 Sort:"[{by:"id",order:"ASC"},{by:"make","order":desc}]",  
 Filter:{
    where:{"logic":"and","id":1234,"perator":"eq"},             
