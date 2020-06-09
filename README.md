@@ -13,14 +13,11 @@
 {
 Action:"Select",                 
 From:"table",                     
-Fields:["id","make","model"],
+Fields:"id","make","model",
 Limit:"5,10",
-Sort:"[{by:"id",order:"ASC"},{by:"make","order":desc}]",  
-Filter:{
-   where:{"logic":"and","id":1234,"perator":"eq"},             
-   include:{"posts":"authorPointer"}, 
-   },
-}
+Sort:[{by:"id",order:"ASC"},{by:"make","order":desc}],  
+Where:{"logic":"and","id":1234,perator:"eq" },
+
 ```
 
 | 字段名 | 可能的值 | 说明 |
