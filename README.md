@@ -31,7 +31,7 @@ Filter:{
 | Sort| [{by:"id",order:"ASC"},{by:"name","order":desc}] | 按照哪个字段排序Asc为正序，Desc为倒序 | 
 | Filter | where,include | 过滤条件 |  
 | Filter.where| {"logic":"and","id":1234,perator:"eq" } | 字段条件(看下面的操作符) | 
-| Filter.include| {"posts":"authorPointer"} | 关系数据（没想好怎么关联） | 
+| ****Filter.include| {"posts":"authorPointer"} | 关系数据（没想好怎么关联） | 
 
 where字段条件操作符，暂定：
 | 操作符 | 说明 |
@@ -43,7 +43,7 @@ where字段条件操作符，暂定：
 | lt,lte | 小于(<),小于或等于(< =)。只有效数值和日期值 |
 | between | 在…之间 |
 | inq,nin | 在/不在一个数组之内 |
-| ne | 不等于(!=) |
+| ne | 不等于(会被翻译成"<>") |
 | like,nlike | like/not like 操作符返回符合正则表达式的数据 |
 | NotNull |  相当于mysql的IS NOT NULL |
 
