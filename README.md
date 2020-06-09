@@ -30,21 +30,22 @@ Filter:{
 | Limit | "5,10" | 读取条数，从哪个开始到哪里结束 | 
 | Sort| [{by:"id",order:"ASC"},{by:"name","order":desc}] | 按照哪个字段排序Asc为正序，Desc为倒序 | 
 | Filter | where,include | 过滤条件 |  
-| Filter.where| {"id":1234,perator:"eq" } | 字段条件(看下面的操作符) | 
+| Filter.where| {"logic":"and","id":1234,perator:"eq" } | 字段条件(看下面的操作符) | 
 | Filter.include| {"posts":"authorPointer"} | 关系数据（没想好怎么关联） | 
 
 where字段条件操作符，暂定：
 | 操作符 | 说明 |
 | --- | --- |
-| eq | 等于 |
 | and | 逻辑与 |
 | or | 逻辑或 |
+| eq | 等于 |
 | gt,gte | 大于(>),大于或等于(> =)。只有效数值和日期值 |
 | lt,lte | 小于(<),小于或等于(< =)。只有效数值和日期值 |
 | between | 在…之间 |
 | inq,nin | 在/不在一个数组之内 |
 | ne | 不等于(!=) |
 | like,nlike | like/not like 操作符返回符合正则表达式的数据 |
+| NotNull |  相当于mysql的IS NOT NULL |
 
 DEMO：
 ```html
