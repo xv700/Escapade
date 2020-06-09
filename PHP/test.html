@@ -17,14 +17,12 @@ Action:"Select",
 From:"table1",                     
 Fields:"id,make,model",     
 Limit:"5,10",
-Filter:{
-   
-   fields:["id","make","model"],  
-   limit:"5,10",                  
-   sort:"[{by:'id',order:'ASC'},{by:'name',order:'desc'}]",                    
-   where:{"id":1234},             
-   include:{"posts":"authorPointer"}, 
-   },
+Sort:[{by:'id',order:'Asc'},{by:'name',order:'Desc'}],  
+Where:{"logic":"and","id":1234,perator:"eq" },            
+// Filter:{
+//    where:{"id":1234},             
+//    include:{"posts":"authorPointer"}, 
+//    },
 }
 // var data = {a:1}
 
