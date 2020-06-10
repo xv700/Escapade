@@ -24,7 +24,7 @@ Where:{"logic":"and","id":1234,perator:"eq" },
 | --- | --- | --- |
 | Action | "Select" | 执行动作，查询（Select），更新（Update），Delete（删除） | 
 | From | "table" | 要操作的表名字 | 
-| Fields | ["id","make","model"] | 显示那些字段 (没想好：匹配所有字段怎么办 ,例如：[" * "]  | 
+| Fields | "id","make","model" | 显示那些字段 (没想好：匹配所有字段怎么办 ,例如：[" * "]  | 
 | Limit | "5,10" | 读取条数，从哪个开始到哪里结束 | 
 | Sort| [{by:"id",order:"ASC"},{by:"name","order":desc}] | 按照哪个字段排序Asc为正序，Desc为倒序 | 
 | Where | {logic:"and",id:1234,perator:"eq" }  | 过滤条件，相当于where 1=1 and id=1233 |  
@@ -39,13 +39,12 @@ where字段条件操作符，暂定：
 | and | 逻辑与 |
 | or | 逻辑或 |
 | eq | 等于 |
-| gt,gte | 大于(>),大于或等于(> =)。只有效数值和日期值 |
-| lt,lte | 小于(<),小于或等于(< =)。只有效数值和日期值 |
+| gt/gte | 大于(>),大于或等于(> =)。只有效数值和日期值 |
+| lt/lte | 小于(<),小于或等于(< =)。只有效数值和日期值 |
 | between | 在…之间 |
 | ne | 不等于(会被翻译成"<>") |
-| NotNull | {"logic":"and","Fields":"name",perator:"Null" } 过滤条件，相当于where name IS NOT NULL |
-| Null |  相当于mysql的IS NULL |
-| Like,NotLike |Where:{NotLike:"%王%",Fields:"name"} where name not like '%王%' |
+| NotNull/Null | {"logic":"and","Fields":"name",perator:"Null" } 过滤条件，相当于where name IS NOT NULL |
+| Like/NotLike |Where:{NotLike:"%王%",Fields:"name"} where name not like '%王%' |
 | *inq,nin | 在/不在一个数组之内 |
 
 
