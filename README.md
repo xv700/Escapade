@@ -45,8 +45,9 @@ where字段条件操作符，暂定：
 | ne | 不等于(会被翻译成"<>") |
 | NotNull | {"logic":"and","Fields":"name",perator:"Null" } 过滤条件，相当于where name IS NOT NULL |
 | Null |  相当于mysql的IS NULL |
+| Like,NotLike |Where:{NotLike:"%王%",Fields:"name"} where name not like '%王%' |
 | *inq,nin | 在/不在一个数组之内 |
-| *like,nlike | like/not like 操作符返回符合正则表达式的数据 |
+
 
 
 DEMO：
