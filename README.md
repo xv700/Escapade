@@ -28,6 +28,7 @@ Where:{"logic":"and","id":1234,perator:"eq" },
 | Limit | "5,10" | 读取条数，从哪个开始到哪里结束 | 
 | Sort| [{by:"id",order:"ASC"},{by:"name","order":desc}] | 按照哪个字段排序Asc为正序，Desc为倒序 | 
 | Where | {"logic":"and","id":1234,perator:"eq" }  | 过滤条件，相当于where 1=1 and id=1233 |  
+| Group | {by:"model"}  | 过滤条件，相当于SELECT * FROM table GROUP BY model; |  
 | *****Filter | where,include | 过滤条件 |  
 | ****Filter.where| {"logic":"and","id":1234,perator:"eq" } | 字段条件(看下面的操作符) | 
 | ****Filter.include| {"posts":"authorPointer"} | 关系数据（没想好怎么关联） | 
