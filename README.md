@@ -27,7 +27,7 @@ Where:{"logic":"and","id":1234,perator:"eq" },
 | Fields | ["id","make","model"] | 显示那些字段 (没想好：匹配所有字段怎么办 ,例如：[" * "]  | 
 | Limit | "5,10" | 读取条数，从哪个开始到哪里结束 | 
 | Sort| [{by:"id",order:"ASC"},{by:"name","order":desc}] | 按照哪个字段排序Asc为正序，Desc为倒序 | 
-| Where | {"logic":"and","id":1234,perator:"eq" }  | 过滤条件，相当于where 1=1 and id=1233 |  
+| Where | {logic:"and",id:1234,perator:"eq" }  | 过滤条件，相当于where 1=1 and id=1233 |  
 | Group | {by:"model"}  | 过滤条件，相当于SELECT * FROM table GROUP BY model; |  
 | *****Filter | where,include | 过滤条件 |  
 | ****Filter.where| {"logic":"and","id":1234,perator:"eq" } | 字段条件(看下面的操作符) | 
