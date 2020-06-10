@@ -28,6 +28,7 @@ Where:{"logic":"and","id":1234,perator:"eq" },
 | Limit | "5,10" | 读取条数，从哪个开始到哪里结束 | 
 | Sort| [{by:"id",order:"ASC"},{by:"name","order":desc}] | 按照哪个字段排序Asc为正序，Desc为倒序 | 
 | Where | {"logic":"and","id":1234,perator:"eq" }  | 过滤条件，相当于where 1=1 and id=1233 |  
+
 | Group | {by:"model"}  | 过滤条件，相当于SELECT * FROM table GROUP BY model; |  
 | *****Filter | where,include | 过滤条件 |  
 | ****Filter.where| {"logic":"and","id":1234,perator:"eq" } | 字段条件(看下面的操作符) | 
@@ -45,7 +46,8 @@ where字段条件操作符，暂定：
 | inq,nin | 在/不在一个数组之内 |
 | ne | 不等于(会被翻译成"<>") |
 | like,nlike | like/not like 操作符返回符合正则表达式的数据 |
-| NotNull |  相当于mysql的IS NOT NULL |
+| NotNull | {"logic":"and","Fields":"name",perator:"Null" } 过滤条件，相当于where name IS NOT NULL |
+| Null |  相当于mysql的IS NULL |
 
 DEMO：
 ```html
