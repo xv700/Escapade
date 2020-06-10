@@ -38,11 +38,10 @@ where字段条件操作符，暂定：
 | --- | --- |
 | and | 逻辑与 |
 | or | 逻辑或 |
-| eq | 等于 |
+| eq/neq | 等于/不等于 |
 | gt/gte | 大于(>),大于或等于(> =)。只有效数值和日期值 |
 | lt/lte | 小于(<),小于或等于(< =)。只有效数值和日期值 |
 | between | 在…之间 |
-| ne | 不等于(会被翻译成"<>") |
 | NotNull/Null | {"logic":"and","Fields":"name",perator:"Null" } 过滤条件，相当于where name IS NOT NULL |
 | Like/NotLike |Where:{NotLike:"%王%",Fields:"name"} where name not like '%王%' |
 | *inq,nin | 在/不在一个数组之内 |
