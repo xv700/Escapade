@@ -13,7 +13,7 @@
 {
 Action:"Select",                 
 From:"table",                     
-Fields:"id","make","model",
+Fields:"id,make,model",
 Limit:"5,10",
 Sort:[{by:"id",order:"ASC"},{by:"make","order":desc}],  
 Where:{"logic":"and","id":1234,perator:"eq" },
