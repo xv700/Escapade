@@ -37,19 +37,17 @@ Group:{by:"model"},
 where字段条件操作符，暂定：
 | 操作符 | 说明 |
 | --- | --- |
-| and | 逻辑与 |
-| or | 逻辑或 |
-| eq/neq | 等于/不等于 |
-| gt/gte | 大于(>),大于或等于(> =)。只有效数值和日期值 |
-| lt/lte | 小于(<),小于或等于(< =)。只有效数值和日期值 |
-| between | 在…之间 |
+| And | 逻辑与 |
+| Or | 逻辑或 |
+| Eq/NotEq | 等于/不等于 |
+| Gt/Gte | 大于(>),大于或等于(> =)。只有效数值和日期值 |
+| Lt/Lte | 小于(<),小于或等于(< =)。只有效数值和日期值 |
+| Between | 在…之间 |
 | NotNull/Null | {"logic":"and","Fields":"name",perator:"Null" } 过滤条件，相当于where name IS NOT NULL |
 | Like/NotLike |Where:{NotLike:"%王%",Fields:"name"} where name not like '%王%' |
 | *inq,nin | 在/不在一个数组之内 |
 
-
-
-DEMO：
+**DEMO：**
 ```html
 <!DOCTYPE html> 
 <html > 
