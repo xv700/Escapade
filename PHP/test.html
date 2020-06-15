@@ -18,7 +18,7 @@ From:"table1",
 Fields:"id,make,model",     
 Limit:"0,10",
 Sort:[{by:'id',order:'Asc'},{by:'make',order:'Desc'}],  
-Where:[{logic:"and",id:1234,perator:"Gte" },{logic:"and",make:"aaa",perator:"Eq" }],            
+Where:[{logic:"and",fields:"id",value:1234,perator:"Lte" },{logic:"and",fields:"make",value:"'aaa'",perator:"Eq" }],            
 // Filter:{
 //    where:{"id":1234},             
 //    include:{"posts":"authorPointer"}, 
