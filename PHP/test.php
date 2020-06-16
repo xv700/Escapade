@@ -13,9 +13,9 @@ function ConnSql()
     // 创建连接
     return mysqli_connect($servername, $username, $password, $dbname);
     // Check connection
-    if (!$conn) {
-        die("连接失败: " . mysqli_connect_error());
-    }
+    // if (!$conn) {
+    //     die("连接失败: " . mysqli_connect_error());
+    // }
 }
 
 // /*
@@ -23,8 +23,17 @@ function ConnSql()
 //  */
 function StrPeplace($str){
     $str = str_replace("Gte",">=",$str);
+    $str = str_replace("Gt",">",$str);
+
     $str = str_replace("Lte","<=",$str);
+    $str = str_replace("Lt","<",$str);
+
+    $str = str_replace("NotNull","IS NOT NULL",$str);
+    $str = str_replace("Null","IS NULL",$str);
+
+    $str = str_replace("NotEq","<>",$str);
     $str = str_replace("Eq","=",$str);
+    
     return $str;
 }
 
@@ -33,8 +42,9 @@ function StrPeplace($str){
 //  */
 $body = file_get_contents('php://input');  //字符串
 
-
-
+// /*
+//  * 以上增加SQL验证
+//  */
 
 $json = json_decode($body,true); //array
 // /*
@@ -49,14 +59,13 @@ $sql = $json["Action"]." ".$json["Fields"]." From ".$json["From"];
 $where = " where 1=1";
 foreach($json["Where"] as $key => $value){
 
-    var_dump($value);
     $where = $where." ".$value["logic"]." ".$value["fields"]." ".$value["perator"]." ".$value["value"];
     
    }
 $where = rtrim($where, ", ");
 $sql = $sql.StrPeplace($where);
 
-var_dump($sql);
+// var_dump($sql);
 // /*
 //  * Sort 非必填
 //  */
@@ -77,9 +86,11 @@ $Limit = " Limit ".$json["Limit"];
 
 $sql = $sql.$Limit;
 
+// var_dump($sql);
 // echo $sql;
 $JsonArr = array(); 
-// echo json_encode($JsonArr);
+
+// SQL执行
 $conn = ConnSql();
 
 $result = mysqli_query($conn, $sql);
@@ -95,19 +106,13 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "0 结果";
 }
-echo json_encode($JsonArr);
+
+$Response = array(); 
+$Response["Sql"] = $sql;
+$Response["Data"] = $JsonArr;
+
+echo json_encode($Response);
  
 mysqli_close($conn);
 
-// echo $json["Filter"]["where"]["id"];
-// echo $json["Action"]." ".$json["Fields"]." From ".$json["From"]." where 1=1"." Limit ".$json["Limit"];
-
-// $json["Fields"]
-// $book = array('a'=>'xiyouji','b'=>'sanguo','c'=>'shuihu','d'=>'hongloumeng');
-// $json = json_encode($book);
-// var_dump($json);
-// $array = json_decode($json,TRUE);
-// $obj = json_decode($json);
-// var_dump($array);
-// var_dump($obj);
 ?>
