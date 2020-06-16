@@ -15,10 +15,14 @@
 var data = {
 Action:"Select",                 
 From:"table1",                     
-Fields:"id,make,model",     
+Fields:"*",     
 Limit:"0,10",
 Sort:[{by:'id',order:'Asc'},{by:'make',order:'Desc'}],  
-Where:[{logic:"and",fields:"id",value:1234,perator:"Lte" },{logic:"and",fields:"make",value:"'aaa'",perator:"Eq" }],            
+Where:[
+  {logic:"and",fields:"id",value:1234,perator:"Lte" },
+  {logic:"and",fields:"make",value:"'aaa'",perator:"NotEq" },
+  {logic:"and",fields:"make",value:"",perator:"NotNull" },
+  ],            
 // Filter:{
 //    where:{"id":1234},             
 //    include:{"posts":"authorPointer"}, 
