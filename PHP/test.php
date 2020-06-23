@@ -34,6 +34,8 @@ function StrPeplace($str){
     $str = str_replace("NotEq","<>",$str);
     $str = str_replace("Eq","=",$str);
     
+    $str = str_replace("NotLike","Not Like",$str);
+    $str = str_replace("NotIn","Not In",$str);
     return $str;
 }
 
