@@ -44,9 +44,9 @@ Group:{by:"model"},
 | Gt/Gte | 大于(>),大于或等于(> =)。只有效数值和日期值 |
 | Lt/Lte | 小于(<),小于或等于(< =)。只有效数值和日期值 |
 | ~~Between~~ | ~~在…之间~~ Gte和Lte可以实现|
-| NotNull/Null | {"logic":"and","Fields":"name",perator:"Null" } 过滤条件，相当于where name IS NOT NULL |
-| Like/NotLike |Where:{Value:"%王_",Fields:"name",perator:"NotLike"} 相当于where name not like '%王_',%为任意个字段，_为任意一个字段 |
-| In/NotIn | Where:{Fields:"name",Value:"'aa','asd'",perator:"In"} 在/不在一个数组之内 |
+| NotNull/Null | {"logic":"and","fields":"name",perator:"Null" } 过滤条件，相当于where name IS NOT NULL |
+| Like/NotLike |Where:{Value:"%王_",fields:"name",perator:"NotLike"} 相当于where name not like '%王_',%为任意个字段，_为任意一个字段 |
+| In/NotIn | Where:{fields:"name",Value:"'aa','asd'",perator:"In"} 在/不在一个数组之内 |
 
 **DEMO：**
 ```html
