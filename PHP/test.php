@@ -58,13 +58,13 @@ $sql = $json["Action"]." ".$json["Fields"]." From ".$json["From"];
 //  * Where 非必填
 //  */
 
-$where = " where 1=1";
+$where = "";
 foreach($json["Where"] as $key => $value){
 
     $where = $where." ".$value["logic"]." ".$value["fields"]." ".$value["perator"]." ".$value["value"];
     
    }
-$where = rtrim($where, ", ");
+$where = " where ".ltrim($where, " and");
 $sql = $sql.StrPeplace($where);
 
 // var_dump($sql);
@@ -96,8 +96,10 @@ $JsonArr = array();
 $conn = ConnSql();
 
 $result = mysqli_query($conn, $sql);
- 
+// $result2 = mysqli_num_rows($result);
+// echo $result2;
 if (mysqli_num_rows($result) > 0) {
+    
 // var_dump(mysqli_fetch_assoc($result));
     
     // 输出数据
@@ -105,9 +107,11 @@ if (mysqli_num_rows($result) > 0) {
         array_push($JsonArr,$row); 
     //   echo json_encode($row);
     }
-} else {
-    echo "0 结果";
-}
+} 
+else
+//  {
+//     echo "1 结果";
+// }
 
 $Response = array(); 
 $Response["Sql"] = $sql;
