@@ -46,7 +46,7 @@ Group:{by:"model"},
 | ~~Between~~ | ~~在…之间~~ Gte和Lte可以实现|
 | NotNull/Null | {"logic":"and","Fields":"name",perator:"Null" } 过滤条件，相当于where name IS NOT NULL |
 | Like/NotLike |Where:{NotLike:"%王%",Fields:"name"} where name not like '%王%' |
-| *inq,nin | 在/不在一个数组之内 |
+| NotIn,In | Where:{Fields:"name",Value:"'aa','asd'",perator:"In"} 在/不在一个数组之内 |
 
 **DEMO：**
 ```html
