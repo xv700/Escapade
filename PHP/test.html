@@ -14,14 +14,18 @@
 
 var data = {
 Action:"Select",                 
-From:"table1",                     
-Fields:"*",     
+Tables:"table1",                     
+Fields:"*",   
+TableAs:[{name:"table1",as:"t666"}] ,
+FieldsAs:[{name:"make",as:"m888"}] ,
 Limit:"0,10",
 Sort:[{by:'id',order:'Asc'},{by:'make',order:'Desc'}],  
 Where:[
   {logic:"and",fields:"id",value:1234,perator:"Lte" },
   {logic:"and",fields:"make",value:"'aaa'",perator:"NotEq" },
   {logic:"and",fields:"make",value:"",perator:"NotNull" },
+  {logic:"and",fields:"make",value:"'%a_'",perator:"Like" },
+  {logic:"and",fields:"make",value:"('a','asdsd')",perator:"NotIn" },
   ],            
 // Filter:{
 //    where:{"id":1234},             
