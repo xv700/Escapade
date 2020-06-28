@@ -1,4 +1,3 @@
-
 <?php
 // /*
 //  * 数据库连接
@@ -34,7 +33,7 @@ function StrPeplace($str){
     $str = str_replace("NotEq","<>",$str);
     $str = str_replace("Eq","=",$str);
     
-    $str = str_replace("NotLike","Not Like",$str);
+    $str = str_replace("NotLike","NOT Like",$str);
     $str = str_replace("NotIn","Not In",$str);
     return $str;
 }
@@ -49,10 +48,25 @@ $body = file_get_contents('php://input');  //字符串
 //  */
 
 $json = json_decode($body,true); //array
+
+// /*
+//  * table 别名 as
+//  */
+$Tables = $json["Tables"];
+foreach($json["TableAs"] as $key => $value){
+    $Tables = str_replace($value["name"],$value["name"]." as ".$value["as"],$Tables);
+}
+// /*
+//  * Fields 别名 as
+//  */
+$Fields = $json["Fields"];
+foreach($json["FieldsAs"] as $key => $value){
+    $Fields = str_replace($value["name"],$value["name"]." as ".$value["as"],$Fields);
+}
 // /*
 //  * Action,Fields,From三项为必填项，需要验证
 //  */
-$sql = $json["Action"]." ".$json["Fields"]." From ".$json["From"];
+$sql = $json["Action"]." ".$Fields." From ".$Tables;
 
 // /*
 //  * Where 非必填
