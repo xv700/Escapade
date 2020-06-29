@@ -1,3 +1,4 @@
+
 <?php
 // /*
 //  * 数据库连接
@@ -56,6 +57,7 @@ $Tables = $json["Tables"];
 foreach($json["TableAs"] as $key => $value){
     $Tables = str_replace($value["name"],$value["name"]." as ".$value["as"],$Tables);
 }
+
 // /*
 //  * Fields 别名 as
 //  */
@@ -63,10 +65,15 @@ $Fields = $json["Fields"];
 foreach($json["FieldsAs"] as $key => $value){
     $Fields = str_replace($value["name"],$value["name"]." as ".$value["as"],$Fields);
 }
+
+$Aggregation = "";
+foreach($json["Aggregation"] as $key => $value){
+    $Aggregation = $Aggregation.",".$value["name"]."(".$value["fields"].") as ".$value["as"];
+}
 // /*
 //  * Action,Fields,From三项为必填项，需要验证
 //  */
-$sql = $json["Action"]." ".$Fields." From ".$Tables;
+$sql = $json["Action"]." ".$Fields.$Aggregation." From ".$Tables;
 
 // /*
 //  * Where 非必填
