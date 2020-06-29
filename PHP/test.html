@@ -15,7 +15,10 @@
 var data = {
 Action:"Select",                 
 Tables:"table1",                     
-Fields:"*",   
+Fields:"make,id",   
+
+// https://www.cnblogs.com/geaozhang/p/6745147.html
+Aggregation:[{name:"COUNT",fields:"*",as:"COUNT666"},{name:"SUM",fields:"id",as:"SUM_id"}], 
 TableAs:[{name:"table1",as:"t666"}] ,
 FieldsAs:[{name:"make",as:"m888"}] ,
 Limit:"0,10",
