@@ -27,6 +27,8 @@ Group:{by:"model"},
 | From | "table" | 要操作的表名字 | 
 | Fields | "id","make","model" | 显示那些字段 (没想好：匹配所有字段怎么办 ,例如：[" * "]  | 
 | Aggregation | [{name:"COUNT",fields:"*",as:"COUNT666"},{name:"SUM",fields:"id",as:"SUM_id"}] | 聚合函数  | 
+| TableAs | [{name:"table1",as:"t666"}] | 给表起别名 | 
+| FieldsAs | [{name:"make",as:"m888"}] | 给字段起别名 | 
 | Limit | "5,10" | 读取条数，从哪个开始到哪里结束 | 
 | Sort| [{by:"id",order:"ASC"},{by:"name","order":desc}] | 按照哪个字段排序Asc为正序，Desc为倒序 | 
 | Where | [{logic:"and",fields:"id",vaule:1234,perator:"Gte" },{logic:"and",fields:"make",vaule:"aaa",make:"aaa",perator:"Eq" }]  | 过滤条件，相当于where 1=1 and id=1233 |  
