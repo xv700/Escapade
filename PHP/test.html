@@ -6,7 +6,7 @@
 
   </head> 
   <body > 
-<div onclick="console.log(this.nnn)" id="aaa" nnn="asda">是分段撒地方</div>
+<button onclick="ajax()" id="aaa" nnn="asda">点击运行</button>
   </body> 
 </html> 
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -36,32 +36,36 @@ Where:[
 //    },
 }
 // var data = {a:1}
+function ajax(){
+	$.ajax({  
 
-$.ajax({  
+	url:"test.php",
 
-url:"test.php",
+	type:"post",  
 
-type:"post",  
+	dataType:"json",  
 
-dataType:"json",  
+	data:JSON.stringify(data),  
 
-data:JSON.stringify(data),  
+	headers: {'Content-Type': 'application/json'},  
 
-headers: {'Content-Type': 'application/json'},  
+	success: function (ret) {    
+	console.log(ret)
+	    // if (ret.status == 1) {      
 
-success: function (ret) {    
-console.log(ret)
-    // if (ret.status == 1) {      
+	    //     window.location.reload();    
 
-    //     window.location.reload();    
+	    // } else {      
 
-    // } else {      
+	    //     alert(ret.message);    
 
-    //     alert(ret.message);    
+	    // }  
 
-    // }  
+	}
+
+	}) 
 
 }
 
-})    
+   
 </script>

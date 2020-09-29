@@ -1,37 +1,20 @@
 
 <?php
 require './TableName.php';
+//是否存在user这个表
+$IshaveTable = TableName\TableNameArray("user");
+if(!$IshaveTable) {
+	echo "数据库名称不存在，请检查数据库名称！";
+	exit();
+}
+
 require './mysql.php';
+require './rules.php';
+
+//var_dump($IshaveTable);
 
 // SQL执行
 $Conn = MySql\ConnSql();
-
-//是否存在user这个表
-$IshaveTable = TableName\TableNameArray("user");
-
-var_dump($IshaveTable);
-
-
-// /*
-//  * where条件连接
-//  */
-function StrPeplace($str){
-    $str = str_replace("Gte",">=",$str);
-    $str = str_replace("Gt",">",$str);
-
-    $str = str_replace("Lte","<=",$str);
-    $str = str_replace("Lt","<",$str);
-
-    $str = str_replace("NotNull","IS NOT NULL",$str);
-    $str = str_replace("Null","IS NULL",$str);
-
-    $str = str_replace("NotEq","<>",$str);
-    $str = str_replace("Eq","=",$str);
-    
-    $str = str_replace("NotLike","NOT Like",$str);
-    $str = str_replace("NotIn","Not In",$str);
-    return $str;
-}
 
 // /*
 //  * $body 为post过来的数据，可以再这一层加验证
@@ -80,7 +63,7 @@ foreach($json["Where"] as $key => $value){
     
    }
 $where = " where ".ltrim($where, " and");
-$sql = $sql.StrPeplace($where);
+$sql = $sql.Rules\StrPeplace($where);
 
 // var_dump($sql);
 // /*
